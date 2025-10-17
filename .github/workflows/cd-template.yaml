@@ -3,7 +3,7 @@ name: Continuous Delivery
 on:
   workflow_call:
     inputs:
-      skip_what_if:
+      skipWhatIf:
         default: false
         type: boolean
       managementgroups:
@@ -53,7 +53,7 @@ jobs:
     permissions:
       id-token: write
       contents: read
-    if: ${{ !inputs.skip_what_if }}
+    if: ${{ !inputs.skipWhatIf }}
     env:
       PARAMETERS_FILE_NAME: parameters.json
 
